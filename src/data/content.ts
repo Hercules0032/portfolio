@@ -245,9 +245,36 @@ export const deployments: Deployment[] = [
 ];
 
 export const certifications = [
-  { name: "Microsoft Azure Fundamentals (AZ-900)", issuer: "Microsoft" },
-  { name: "Cybersecurity", issuer: "Campus Technology, Times of India Group" },
-  { name: "TCS iON Career Edge", issuer: "Tata Consultancy Services" },
+  {
+    name: "Microsoft Azure Fundamentals (AZ-900)",
+    issuer: "Microsoft",
+    file: "/Microsoft Azure.png",
+  },
+  {
+    name: "Cybersecurity",
+    issuer: "Campus Technology, Times of India Group",
+    file: "/CybersecurityCampus Technology, Times of India Group.jpeg",
+  },
+  {
+    name: "TCS iON Career Edge",
+    issuer: "Tata Consultancy Services",
+    file: "/TCS ION.pdf",
+  },
+  {
+    name: "Technothon IoT Exposition 2025",
+    issuer: "Technothon",
+    file: "/technothon iot exposition.jpg",
+  },
+  {
+    name: "Technothon AI Unleashed",
+    issuer: "Technothon",
+    file: "/technothon AI Unleashed.pdf",
+  },
+  {
+    name: "All India NCAT (AINCAT)",
+    issuer: "Naukri Campus",
+    file: "/AINCAT.pdf",
+  },
 ];
 
 // Chronological journey — mixes education, hackathons, experience and
