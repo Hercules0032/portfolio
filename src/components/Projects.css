@@ -1,0 +1,216 @@
+.projects {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 96px var(--gutter);
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.proj-card {
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  position: relative;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: var(--bg-panel);
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: border-color 0.25s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset;
+}
+
+.proj-card:hover {
+  border-color: var(--accent-2);
+  box-shadow: var(--glow-accent-2), 0 1px 0 rgba(255, 255, 255, 0.04) inset;
+}
+
+.proj-card::before,
+.proj-card::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-color: var(--accent);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.proj-card::before {
+  top: -1px;
+  left: -1px;
+  border-style: solid;
+  border-width: 2px 0 0 2px;
+}
+.proj-card::after {
+  bottom: -1px;
+  right: -1px;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+}
+.proj-card:hover::before,
+.proj-card:hover::after {
+  opacity: 1;
+}
+
+.proj-card__pin {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft), 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.proj-card__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.proj-card__top h3 {
+  font-size: 19px;
+}
+
+.proj-card__tagline {
+  font-size: 13px;
+  color: var(--ink-dim);
+  margin-top: 4px;
+}
+
+.proj-card__date {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+
+.proj-card__bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.proj-card__bullets li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 13.5px;
+  color: var(--ink-dim);
+  line-height: 1.6;
+}
+
+.proj-card__bullets li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.proj-card__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-top: 4px;
+}
+
+.proj-card__stack span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent-2);
+  background: var(--accent-2-soft);
+  border-radius: 3px;
+  padding: 4px 8px;
+}
+
+.proj-card__foot {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
+}
+
+.proj-card__link {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink);
+  transition: color 0.2s ease;
+}
+
+.proj-card__link:hover {
+  color: var(--accent);
+}
+
+.proj-card__link--placeholder {
+  color: var(--ink-faint);
+  font-style: italic;
+}
+
+@media (max-width: 980px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .projects {
+    padding: 72px var(--gutter);
+  }
+}
+
+/* ---- empty pin slot ---- */
+.proj-card--empty {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-style: dashed;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  min-height: 220px;
+  gap: 10px;
+}
+
+.proj-card--empty:hover {
+  border-color: var(--ink-faint);
+  box-shadow: none;
+}
+
+.proj-card__pin-index {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  color: var(--ink-faint);
+}
+
+.proj-card__empty-glyph {
+  font-family: var(--font-display);
+  font-size: 26px;
+  color: var(--ink-faint);
+  border: 1px dashed var(--rule);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.proj-card__empty-text {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-faint);
+}

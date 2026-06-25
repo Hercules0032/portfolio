@@ -1,0 +1,75 @@
+.bp-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background: radial-gradient(
+    ellipse 80% 60% at 50% -10%,
+    rgba(111, 224, 242, 0.06) 0%,
+    transparent 60%
+  );
+}
+
+.bp-bg__grid {
+  position: absolute;
+  inset: -2px;
+  background-image:
+    linear-gradient(var(--grid-line-major) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line-major) 1px, transparent 1px),
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size:
+    calc(var(--grid-step) * 5) calc(var(--grid-step) * 5),
+    calc(var(--grid-step) * 5) calc(var(--grid-step) * 5),
+    var(--grid-step) var(--grid-step),
+    var(--grid-step) var(--grid-step);
+  mask-image: radial-gradient(
+    ellipse 90% 70% at 50% 0%,
+    black 0%,
+    black 35%,
+    transparent 85%
+  );
+}
+
+.bp-bg__vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 140% 100% at 50% 30%,
+    transparent 45%,
+    rgba(2, 5, 10, 0.55) 100%
+  );
+}
+
+.bp-bg__mark {
+  position: fixed;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--ink-faint);
+  opacity: 0.55;
+}
+
+.bp-bg__mark--tl {
+  top: 14px;
+  left: 14px;
+}
+.bp-bg__mark--tr {
+  top: 14px;
+  right: 14px;
+}
+.bp-bg__mark--bl {
+  bottom: 14px;
+  left: 14px;
+}
+.bp-bg__mark--br {
+  bottom: 14px;
+  right: 14px;
+}
+
+@media (max-width: 640px) {
+  .bp-bg__mark {
+    display: none;
+  }
+}

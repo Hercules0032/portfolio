@@ -1,0 +1,136 @@
+.contact {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 96px var(--gutter) 0;
+}
+
+.contact__panel {
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  background: linear-gradient(
+    160deg,
+    var(--bg-panel) 0%,
+    var(--bg-panel-raised) 100%
+  );
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 30px 60px -30px rgba(0, 0, 0, 0.6);
+  padding: 56px;
+  text-align: center;
+}
+
+.contact__headline {
+  font-size: clamp(26px, 4vw, 38px);
+  max-width: 560px;
+  margin: 0 auto 16px;
+  background: linear-gradient(120deg, var(--ink) 30%, var(--accent-2) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.contact__sub {
+  max-width: 480px;
+  margin: 0 auto 32px;
+  color: var(--ink-dim);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.contact__actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.contact__actions .btn--ghost {
+  background: transparent;
+  border: 1px solid var(--rule);
+}
+
+.contact__meta {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--ink-faint);
+}
+
+/* ---- title block (footer) ---- */
+.titleblock {
+  margin-top: 64px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+}
+
+.titleblock__row {
+  display: flex;
+  gap: 32px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rule);
+  flex-wrap: wrap;
+}
+
+.titleblock__row > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.titleblock__k {
+  color: var(--ink-faint);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+}
+
+.titleblock__v {
+  color: var(--ink);
+}
+
+.titleblock__v--accent {
+  color: var(--accent-2);
+}
+
+.titleblock__row--links {
+  align-items: center;
+  gap: 22px;
+}
+
+.titleblock__row--links a {
+  color: var(--ink-dim);
+  transition: color 0.2s ease;
+}
+
+.titleblock__row--links a:hover {
+  color: var(--accent);
+}
+
+.titleblock__copy {
+  margin-left: auto;
+  color: var(--ink-faint);
+}
+
+.titleblock__row--links {
+  border-bottom: none;
+  padding-bottom: 32px;
+}
+
+@media (max-width: 760px) {
+  .contact__panel {
+    padding: 36px 22px;
+  }
+  .titleblock__copy {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .contact {
+    padding: 72px var(--gutter) 0;
+  }
+}
