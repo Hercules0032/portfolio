@@ -98,7 +98,7 @@ export default function Hero() {
               </a>
             </Magnetic>
             <Magnetic>
-              <a href={profile.resumeUrl} className="btn btn--ghost" download>
+              <a href={profile.resumeUrl} className="btn btn--ghost" download="Pratyay-Roy-Resume.pdf">
                 Download Resume
               </a>
             </Magnetic>
