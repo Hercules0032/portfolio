@@ -80,6 +80,7 @@ export default function Hero() {
           >
             <span className="hero__quote-mark">“</span>
             {profile.quote}
+            <span className="hero__quote-mark">”</span>
           </motion.blockquote>
 
           <motion.div

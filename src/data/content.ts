@@ -5,7 +5,7 @@
 
 export const profile = {
   name: "Pratyay Roy",
-  role: "Full Stack Software Engineer",
+  role: "Full Stack Software Developer",
   location: "Kolkata, West Bengal, India",
   phone: "8240596130",
   email: "roypratyay.2@gmail.com",
@@ -15,7 +15,7 @@ export const profile = {
   leetcode: "https://leetcode.com/u/Hercules0032",
   quote:
     "An error message isn't a wall blocking your progress. It is a precise roadmap telling you exactly what to fix next.",
-  status: "Open to full-time Software Engineer roles",
+  status: "Open to full-time Software Developer roles",
   resumeUrl: "/resume.pdf",
 };
 
@@ -150,7 +150,7 @@ export const projects: Project[] = [
       "Integrated the openFDA Drug Label API into the prescription workflow for real-time lookup across 100K+ indexed drug records; automated Mailable notifications on appointment confirmation and prescription dispatch, cutting manual communication overhead by 100%.",
       "Enforced 3-layer role middleware with custom server-side validation and a bilingual (EN/BN) i18n system; built a patient medical-report upload pipeline supporting PDF/JPG/PNG with persistent MySQL storage.",
     ],
-    link: "https://github.com/Hercules0032/gesture-controlled-virtual-mouse",
+    link: "https://github.com/Hercules0032/meditrack",
     linkLabel: "View source",
     pinned: true,
   },
