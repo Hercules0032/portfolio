@@ -5,7 +5,8 @@ import {
   SiLaravel,
   SiFastapi,
   SiMysql,
-  SiPostgresql,
+  SiPython,
+  SiPhp,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa6";
 import { profile, stats } from "../data/content";
@@ -16,13 +17,14 @@ import "./Hero.css";
 const easeOut = [0.16, 1, 0.3, 1] as const;
 
 const STACK = [
-  { label: "React", sub: "+ Vite", Icon: SiReact },
-  { label: "TypeScript", sub: "", Icon: SiTypescript },
-  { label: "Java", sub: "Core, 21", Icon: FaJava },
-  { label: "Laravel", sub: "+ Sanctum", Icon: SiLaravel },
   { label: "FastAPI", sub: "+ Pydantic", Icon: SiFastapi },
+  { label: "Laravel", sub: "+ Sanctum", Icon: SiLaravel },
+  { label: "TypeScript", sub: "", Icon: SiTypescript },
+  { label: "React", sub: "+ Vite", Icon: SiReact },
+  { label: "Java", sub: "Core, 21", Icon: FaJava },
+  { label: "Python", sub: "", Icon: SiPython },
+  { label: "PHP", sub: "", Icon: SiPhp },
   { label: "MySQL", sub: "", Icon: SiMysql },
-  { label: "PostgreSQL", sub: "", Icon: SiPostgresql },
 ];
 
 export default function Hero() {
