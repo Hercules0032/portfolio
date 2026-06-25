@@ -272,7 +272,7 @@ export const certifications = [
   },
   {
     name: "All India NCAT (AINCAT)",
-    issuer: "Naukri Campus",
+    issuer: "AINCAT",
     file: "/AINCAT.pdf",
   },
 ];
