@@ -19,7 +19,17 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("");
+  const [photoOpen, setPhotoOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+
+  useEffect(() => {
+    if (!photoOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setPhotoOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [photoOpen]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -51,7 +61,16 @@ export default function Nav() {
     <header className={`nav ${scrolled ? "nav--scrolled" : ""}`}>
       <div className="nav__inner">
         <a href="#top" className="nav__mark">
-          <img src={photo} alt="Pratyay Roy" className="nav__photo" />
+          <img
+            src={photo}
+            alt="Pratyay Roy"
+            className="nav__photo"
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              setPhotoOpen(true);
+            }}
+          />
           <span>
             <span className="nav__mark-bracket">[</span>PR
             <span className="nav__mark-bracket">]</span>
@@ -112,6 +131,31 @@ export default function Nav() {
             Let&rsquo;s talk
           </a>
         </nav>
+      )}
+
+      {photoOpen && (
+        <div
+          className="nav__lightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Profile photo"
+          onClick={() => setPhotoOpen(false)}
+        >
+          <button
+            className="nav__lightbox-close"
+            aria-label="Close"
+            type="button"
+            onClick={() => setPhotoOpen(false)}
+          >
+            &times;
+          </button>
+          <img
+            src={photo}
+            alt="Pratyay Roy"
+            className="nav__lightbox-img"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
       )}
     </header>
   );
