@@ -141,11 +141,11 @@ export const projects: Project[] = [
     date: "June 2026",
     stack: ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion"],
     bullets: [
-      "A keyboard-first typing test with time (15/30/60/120s, endlessly refilling) and words (10/25/50/100, ends on the last word) modes, plus punctuation and numbers toggles — passages are generated client-side from a ~250-word pool, with zero network calls or APIs.",
-      "Renders per-character live feedback the moment each key is pressed (correct, wrong with expected char, extra, and skipped states), a Framer Motion caret that smoothly slides and blinks when idle, and pinned line scrolling so the text never jumps.",
-      "Computes accurate per-keystroke metrics — WPM (correct chars ÷ 5 ÷ minutes), raw WPM, and backspace-faithful accuracy — and visualizes them on a hand-rolled animated SVG WPM-over-time chart with a graceful fallback for short tests.",
+      "A keyboard-first typing test with time (15/30/60/120 secs), endlessly refilling and words (10/25/50/100) + punctuation and numbers toggles",
+      "Passages are generated client-side from a ~250-word pool, with zero network calls or APIs.",
+      "Computes accurate per-keystroke metrics — WPM (correct chars ÷ 5 ÷ minutes) and visualizes them on a hand-rolled animated SVG WPM-over-time chart with a graceful fallback for short tests.",
     ],
-    link: "https://github.com/Hercules0032",
+    link: "https://github.com/Hercules0032/LexPace",
     linkLabel: "View source",
     pinned: true,
   },
@@ -212,7 +212,7 @@ export const projects: Project[] = [
       "Designed a normalized SQL relational schema with Pydantic-driven validation and optimized indexing — cutting health-trend data retrieval time by 25% across 50+ medical test formats.",
       "Built a React frontend integrating FastAPI's auto-generated OpenAPI endpoints to deliver real-time health-trend visualizations and streamline API responses.",
     ],
-    link: "https://github.com/Hercules0032",
+    link: "https://github.com/Nakshatra-14/NutriScan-AI",
     linkLabel: "View source",
     pinned: true,
   },
@@ -316,7 +316,7 @@ export const journey: LogEntry[] = [
     sort: 202510,
     title: "Shipped NutriScan",
     detail:
-      "FastAPI + React health-data platform — showcased at Technothon: AI Unleashed.",
+      "Technothon - AI Unleashed. FastAPI + React health-data platform.",
   },
   {
     date: "MAY 2026",
@@ -329,12 +329,6 @@ export const journey: LogEntry[] = [
     sort: 202605,
     title: "Graduated B.Tech, CSE (AI/ML)",
     detail: "CGPA 7.6 / 10 (till 7th semester)",
-  },
-  {
-    date: "JUN 2026",
-    sort: 202606,
-    title: "Architected MediTrack",
-    detail: "Laravel 13 hospital management system",
   },
 ].sort((a, b) => a.sort - b.sort);
 
