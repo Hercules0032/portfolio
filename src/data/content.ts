@@ -135,6 +135,21 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: "lexpace",
+    name: "LexPace",
+    tagline: "MonkeyType-style Typing Speed Test",
+    date: "June 2026",
+    stack: ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion"],
+    bullets: [
+      "A keyboard-first typing test with time (15/30/60/120s, endlessly refilling) and words (10/25/50/100, ends on the last word) modes, plus punctuation and numbers toggles — passages are generated client-side from a ~250-word pool, with zero network calls or APIs.",
+      "Renders per-character live feedback the moment each key is pressed (correct, wrong with expected char, extra, and skipped states), a Framer Motion caret that smoothly slides and blinks when idle, and pinned line scrolling so the text never jumps.",
+      "Computes accurate per-keystroke metrics — WPM (correct chars ÷ 5 ÷ minutes), raw WPM, and backspace-faithful accuracy — and visualizes them on a hand-rolled animated SVG WPM-over-time chart with a graceful fallback for short tests.",
+    ],
+    link: "https://github.com/Hercules0032",
+    linkLabel: "View source",
+    pinned: true,
+  },
+  {
     id: "meditrack",
     name: "MediTrack",
     tagline: "Hospital & Clinic Management System",
@@ -226,6 +241,13 @@ export type Deployment = {
 };
 
 export const deployments: Deployment[] = [
+  {
+    projectId: "lexpace",
+    platform: "Vercel",
+    url: "https://lex-pace.vercel.app/",
+    mode: "iframe",
+    configured: true,
+  },
   {
     projectId: "tempo",
     platform: "Vercel",
