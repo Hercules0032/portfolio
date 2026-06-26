@@ -1,8 +1,3 @@
-// ============================================================
-// All portfolio content lives here. Edit this file to update
-// copy, links, or data — no need to touch components.
-// ============================================================
-
 export const profile = {
   name: "Pratyay Roy",
   role: "Full Stack Software Developer",
@@ -36,7 +31,7 @@ export const education = {
 
 export type SkillGroup = {
   label: string;
-  code: string; // short legend code, blueprint-component-style
+  code: string;
   items: string[];
 };
 
@@ -135,7 +130,7 @@ export type Project = {
   link?: string;
   linkLabel?: string;
   placeholderLink?: boolean;
-  pinned?: boolean; // shown on the pinned projects board
+  pinned?: boolean;
 };
 
 export const projects: Project[] = [
@@ -222,12 +217,8 @@ export const projects: Project[] = [
   },
 ];
 
-// Live Deployments — links out to your hosted apps (Vercel / Netlify / Render).
-// `mode: "iframe"` embeds a live preview; `mode: "screenshot"` shows a static
-// placeholder card with a link out. Fill in `url` and flip `configured: true`
-// once each project is actually deployed.
 export type Deployment = {
-  projectId: string; // must match a Project.id above
+  projectId: string;
   platform: "Vercel" | "Netlify" | "Render";
   url: string;
   mode: "iframe" | "screenshot";
@@ -277,12 +268,9 @@ export const certifications = [
   },
 ];
 
-// Chronological journey — mixes education, hackathons, experience and
-// projects using only dates confirmed on the resume (plus the two
-// hackathon milestones added below).
 export type LogEntry = {
   date: string;
-  sort: number; // YYYYMM for ordering
+  sort: number;
   title: string;
   detail: string;
 };
@@ -328,7 +316,6 @@ export const journey: LogEntry[] = [
   },
 ].sort((a, b) => a.sort - b.sort);
 
-// Stats pulled directly from resume bullets, used as dimension-line callouts.
 export const stats = [
   { value: "100K+", label: "drug records indexed (MediTrack)" },
   { value: "25%", label: "faster data retrieval (NutriScan)" },

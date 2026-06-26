@@ -12,7 +12,7 @@ export default function Contact() {
       setCopied(true);
       setTimeout(() => setCopied(false), 1800);
     } catch {
-      // clipboard unavailable — mailto link below still works
+      // ignore
     }
   };
 

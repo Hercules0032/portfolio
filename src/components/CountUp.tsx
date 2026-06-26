@@ -2,10 +2,9 @@ import { useEffect, useRef } from "react";
 import { useInView, useMotionValue, useSpring, motion } from "framer-motion";
 
 type Props = {
-  value: string; // e.g. "100K+", "25%", "5+", "15"
+  value: string;
 };
 
-/** Parses a leading number out of strings like "100K+" or "25%" and counts up to it. */
 export default function CountUp({ value }: Props) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "-40px" });

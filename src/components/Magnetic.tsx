@@ -8,7 +8,6 @@ type Props = {
   strength?: number;
 };
 
-/** Wrap a button/link to give it a subtle magnetic pull toward the cursor. */
 export default function Magnetic({ children, className, strength = 0.3 }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);

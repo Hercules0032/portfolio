@@ -1,9 +1,5 @@
 import "./BlueprintBackground.css";
 
-/**
- * Fixed full-viewport blueprint grid + corner sheet marks.
- * Purely decorative — sits behind all content.
- */
 export default function BlueprintBackground() {
   return (
     <div className="bp-bg" aria-hidden="true">
